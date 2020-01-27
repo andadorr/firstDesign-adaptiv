@@ -84,3 +84,77 @@
   margin-bottom: 0;
   padding: 0;
 }
+
+@media (min-resolution: 2dppx) {
+  .header {
+    background-image: url("../img/screen-bg-2x.jpg");
+  }
+  .header_lider {
+    &::after {
+      background-image: url("../img/medal-2x.png");
+      background-size: cover;
+    }
+  }
+}
+
+@media (min-width: 480px) {
+  .header {
+    background-position: center top;
+  }
+}
+
+@media (min-width: 580px) {
+  .header_buttons {
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    margin: 30px 0 95px;
+  }
+
+  .header_lider {
+    flex-basis: 288px;
+    flex-shrink: 0;
+    margin:0 ;
+  }
+
+  .header_work {
+    flex-basis: 264px;
+    min-width: 264px;
+    margin-right: 23px;
+  }
+}
+
+@media (min-width: 768px) {
+  .header_title {
+    font-size: px-to-rem(44px);
+    line-height: px-to-rem(53px);
+  }
+
+  .header_subtitle {
+    font-size: px-to-rem(28px);
+    line-height: px-to-rem(32px);
+  }
+}
+
+@media (min-width: 1024px) {
+  .header_title {
+    font-size: px-to-rem(54px);
+    line-height: px-to-rem(64px);
+    padding-top: 85px;
+    margin-bottom: 12px;
+  }
+
+  .header_subtitle {
+    font-size: px-to-rem(32px);
+    line-height: px-to-rem(37px);
+    margin-top: 12px;
+    margin-bottom: 30px;
+  }
+
+  .header_wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: calc(100% - 240px);
+  }
+}
