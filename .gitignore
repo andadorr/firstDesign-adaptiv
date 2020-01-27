@@ -1,5 +1,6 @@
 build/
 node_modules/
+fullPage.js/
 .DS_Store
 Thumbs.db
 .idea
