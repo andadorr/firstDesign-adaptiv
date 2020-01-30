@@ -179,3 +179,114 @@ div.fp-controlArrow.fp-next {
   left: auto;
   right: 15px;
 }
+
+
+@media (min-width: 480px) {
+  .projects_gallery {
+    display: flex;
+    justify-content: center;
+  }
+  .projects_big {
+    margin-bottom: 0;
+  }
+  .projects_mini {
+    flex-direction: column;
+    margin-left: 7px;
+
+    a {
+      margin-right: 0;
+      margin-bottom: 3px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .projects_slides, .projects .fp-tableCell, .projects .fp-scroller {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-column-gap: 30px;
+    align-content: center;
+  }
+
+  .projects_title {
+    text-align: left;
+    grid-column: 1 / -1;
+    margin-bottom: 15px;
+  }
+  .projects_example {
+    grid-column: 1 / -1;
+    text-align: left;
+    margin-top: 10px;
+    margin-bottom: 15px;
+  }
+
+  .fp-scrollable {
+    grid-column: 1 / -1;
+  }
+
+  .projects_gallery {
+    grid-column: 1/ 4;
+    margin-top: 15px;
+  }
+
+  .projects_information {
+    grid-column: 4 / -1;
+  }
+
+  .projects_result {
+    grid-column: 3 / 4;
+  }
+
+  .projects_object {
+    grid-column: 1 / -1;
+    display: flex;
+    flex-wrap: wrap;
+    border-right: none;
+    border-top: none;
+    border-bottom: none;
+    border-left: 1px solid #454545;
+  }
+
+  .projects_item {
+    flex-basis: 33.3%;
+    border: 1px solid #454545;
+    margin-left: -1px;
+    margin-top: -1px;
+    &:last-child {
+      border-bottom: 1px solid #454545;
+    }
+  }
+  .projects_big {
+    img {
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .projects_it-was, .projects_task, .projects_result {
+
+    p {
+      font-size: px-to-rem(14px);
+      line-height: px-to-rem(22px);
+      
+      &:first-child {
+        font-size: px-to-rem(18px);
+        line-height: px-to-rem(21px);
+      }
+    }
+  }
+
+  .projects_task {
+    li {
+      font-size: px-to-rem(14px);
+      line-height: px-to-rem(22px);
+      margin-bottom: 0;
+      &::after {
+        top: 8px;
+      };
+    }
+  }
+}
